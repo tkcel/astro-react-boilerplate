@@ -1,0 +1,52 @@
+{
+  // 基本的な設定
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  // 括弧に色をつける（coenraads.bracket-pair-colorizer-2と同様の機能）
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+
+  // 保存時の挙動
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  // HTMLを対象外
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  // CSSを対象外
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  // JSを対象外
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+
+  // ESLintの設定
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // stylelint の設定
+  // VSCode の CSSデフォルトLint との重複実行を避ける
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+
+  // Prettierの設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Astroの設定
+  "prettier.documentSelectors": ["**/*.astro"],
+
+  // その他の設定
+
+  // ファイル末尾を改行必須に
+  "files.insertFinalNewline": true
+}

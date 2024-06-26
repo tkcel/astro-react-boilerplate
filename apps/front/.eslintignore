@@ -1,0 +1,10 @@
+# config系
+.*lintrc.js
+.*lintrc.cjs
+
+*.config.js
+*.config.mjs
+*.config.ts
+
+# scripts系
+scripts/

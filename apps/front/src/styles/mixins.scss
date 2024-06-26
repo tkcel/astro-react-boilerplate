@@ -1,0 +1,49 @@
+// デザイン対応しているモード
+$breakpoints-base: (
+  'sm': 'screen and (max-width: 768px)',
+  'lg': 'screen and (min-width: 769px)',
+);
+
+// デザイン対応していないですが、一部コンテンツの表示非表示制御のため
+$breakpoints-ui: (
+  'xsm': 'screen and (max-width: 355px)',
+);
+
+@mixin mode($breakpoint: sm) {
+  /* stylelint-disable-next-line media-query-no-invalid */
+  @media #{map-get(map-merge($breakpoints-base, $breakpoints-ui), $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin generate-mode-display() {
+  @each $size, $screen in $breakpoints-base {
+    // display:flexが使われることを考慮して、onlyの逆を消している
+    .d-#{$size}-only {
+      @each $size2, $screen2 in $breakpoints-base {
+        @if $size2 != $size {
+          @include mode(#{$size2}) {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+$max: 50;
+$offset: 5;
+$unit: 'px';
+
+// padding や margin の ユーティリティクラス を生成するために使用
+@mixin generate-spaces($className, $styleName) {
+  $i: 0;
+
+  @while $i <= $max {
+    #{$className + $i} {
+      #{$styleName}: #{$i + $unit};
+    }
+
+    $i: $i + $offset;
+  }
+}

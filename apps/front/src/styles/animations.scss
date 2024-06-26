@@ -1,0 +1,29 @@
+%animation-hover {
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+%animation-hover-disabled {
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+%animation-active {
+  &:active {
+    position: relative;
+    top: 2px;
+    text-decoration: none;
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+%animation-active-disabled {
+  &:active {
+    top: 0;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "language": "en-US",
+
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dictionary",
+      "path": "./.cspell/custom-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "languageSettings": [
+    {
+      "languageId": "typescript",
+      "dictionaries": ["custom-dictionary"]
+    }
+  ],
+  "dictionaries": ["custom-dictionary"],
+
+  "ignorePaths": [
+    ".git",
+    "**/*.svg",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.tsbuildinfo",
+    "**/**.d.ts",
+    "**/coverage/**",
+    "**/cypress/support/**",
+    "**/cypress/videos/**",
+    "**/dist/**",
+    "**/node_modules",
+    "**/node_modules/**",
+    "**/yarn-error.log",
+    "node_modules",
+    "node_modules/**",
+    "package.json",
+    "vscode-extension"
+  ],
+
+  "enabledLanguageIds": [
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ]
+}

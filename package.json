@@ -1,0 +1,19 @@
+{
+  "name": "astro-react-boilerplate",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/front",
+    "apps/old-lp"
+  ],
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "engines": {
+    "node": "20.10.x",
+    "npm": "npmではなくyarnを使用してください"
+  }
+}

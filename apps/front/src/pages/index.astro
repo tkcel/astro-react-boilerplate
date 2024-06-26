@@ -1,0 +1,12 @@
+---
+import { Button } from '@/components/common/Button';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="フォーム" description="一括査定申し込み">
+  <header slot="header">ヘッダー</header>
+  <main>
+    <Button client:load />
+  </main>
+  <footer slot="footer">フッター</footer>
+</Layout>

@@ -1,0 +1,44 @@
+---
+import '@/styles/global.scss';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,viewport-fit=cover"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- TODO theme colorの設定 -->
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <!-- TODO ogタグ系をどするか？ -->
+    <!-- TODO robotsをどうするか？ -->
+    <!-- TODO canonicalをどうするか？ -->
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <slot name="header">
+        <!-- TODO デフォルトヘッダーどうするか？ -->
+        <div>---default header---</div>
+      </slot>
+    </header>
+    <slot />
+    <footer>
+      <slot name="footer">
+        <!-- TODO デフォルトフッターどうするか？ -->
+        <div>---default footer---</div>
+      </slot>
+    </footer>
+  </body>
+</html>

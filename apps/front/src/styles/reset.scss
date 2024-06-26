@@ -1,0 +1,15 @@
+// sanitize.css でリセットされないものを個別にリセットをかけておく
+// FIXME th bold: normal を設定したい
+ul,
+ol,
+dl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li,
+dd {
+  padding: 0;
+  margin: 0;
+}
